@@ -148,14 +148,19 @@
 							<p><b>Negative emotions.</b> This is measured by asking respondents if they experienced negative affect for a long time yesterday. Those are worry, sadness and anger.</p>
 							<p>Comparison of life evaluations provides the most informative measure for international comparisons because they capture quality of life in a more complete and stable way than emotional reports based on daily experiences.</p>
 							<p>Indicators such as life scale, GDP per capita, Social support, Healthy life expectancy, Freedom to make life choices, Generosity, Perceptions of corruption, Positive affect, Negative affect are considered keys to determine a score in the evaluation of happiness in daily life.</p>
-							<p>In the following geographic graph it is possible to filter these fields by year. However, in this project, due to the complexity of the current interpretation (of the year 2021), an analysis is shown that compares the results of the measurement of the year 2017.</p>
-							 <p>The countries in strong blue are the happiest, while those that are colored in red are the least happy. In 2017 the 5 happiest countries were
+							<p>
+								The factors mostly involved in the happiness index are: Family, Life expectancy, Economy and Generosity.
+							</p>
+							<p>In the following geographic graph it is possible to filter these fields by year.</p>
+							<div class='tableauPlaceholder' id='viz1638345257245' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Da&#47;DataPanelWorldWell-Being2005-2020&#47;Generosity&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='path' value='views&#47;DataPanelWorldWell-Being2005-2020&#47;Generosity?:language=en-US&amp;:embed=true' /> <param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Da&#47;DataPanelWorldWell-Being2005-2020&#47;Generosity&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1638345257245');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+							
+							<p></p>
+							<p>The countries in strong blue are the happiest, while those that are colored in red are the least happy. In 2017 the 5 happiest countries were
 							Norway, Denmark, Iceland, Switzerland and Finland.</p>
 							<p>While the 5 least happy are countries like Central African Republic, Burundi, Tanzania, Syria and Rwanda. All in Africa</p>
-
 						
 							<p>
-								Map with the results of the 2016 measurement. Countries in strong blue are the happiest, while those colored in red are the least happy.
+								Map with the results of the 2017 measurement. Countries in strong blue are the happiest, while those colored in red are the least happy.
 							</p>
 							<div class='tableauPlaceholder' id='viz1637898581619' style='position: relative'>
 								<noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;My&#47;MyDataWorldHappinessViz&#47;Sheet2&#47;1_rss.png' style='border: none' /></a>
@@ -183,13 +188,6 @@
 								In 2017 the 5 happiest countries were
 								Norway, Denmark, Iceland, Switzerland and Finland. While the 5 least happy are countries such as the Central Republic of Africa, Burundi, Tanzania, Syria and Rwanda. All in Africa
 							</p>
-
-
-							<p>
-								The factors mostly involved in the happiness index are: Family, Life expectancy, Economy and Generosity.
-							</p>
-							
-
 
 							<p>Data sources <a href="https://worldhappiness.report">Happiness Reports</a></p>
 						</article>
@@ -270,13 +268,62 @@ df.to_csv('matches.csv',index=False)
 						<article id="project_5">
 							<h2 class="major">Computer Vision</h2>
 							<h3>Counting people with computer vision</h3>
-							<span class="image main"><img src="images/countingpeople.PNG" alt="" /></span>
+							<span class="image main"><img src="images/roi_activation.PNG" alt="" /></span>
 							<p>Expertise tools: C++, Visual Studio 2019, OpenCV, Intel Realsense 3D Camera.</p>
 							<p>
 								Currently we have different methods (mechanical counter, turnstiles, scales, bars with sensors, 2D cameras, among others) to count the people who enter an enclosure (schools, hospitals, theaters, etc.), however, the constant change and advances in technology force us to modify or change these methods to adapt them to the emerging needs. In addition, the change brings with it new requirements and new specifications, so this project consists of a system capable of count people by computer vision (using a 3D camera) who come in and leave, with the objective of determining the number of people who are within an enclosure.
 							</p>								
-							<p>Here check out my App <a href="https://contador-personas-1e772.web.app/">People Counter</a>.</p>
-							<p>More Description.</p>
+							
+							<p>3D Camera Intel RealSense Model D415</p>
+							<span class="image main"><img src="images/camera_realsense_d415.PNG" alt="" /></span>
+							<p>More Description (Still in progress).</p>
+							<h4>Image Processing</h4>
+							<div class="table-wrapper">
+								<table class="alt">
+									<thead>
+										<tr>
+											<th>Section</th>
+											<th>Description</th>
+											<th>Results</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>Item One</td>
+											<td>Image Acquisition</td>
+											<td>...</td>
+										</tr>
+										<tr>
+											<td>Item Two</td>
+											<td>Image Alignment</td>
+											<td>...</td>
+										</tr>
+										<tr>
+											<td>Item Three</td>
+											<td> Background Substraction</td>
+											<td>...</td>
+										</tr>
+										<tr>
+											<td>Item Four</td>
+											<td>Image Binarization.</td>
+											<td>...</td>
+										</tr>
+										<tr>
+											<td>Item Five</td>
+											<td>Regions of Interest Delimitation</td>
+											<td>...</td>
+										</tr>
+									</tbody>
+									<tfoot>
+										<tr>
+											<td colspan="2"></td>
+											<td><p>Here check out my App <a href="https://contador-personas-1e772.web.app/">People Counter</a>.</p></td>
+										</tr>
+									</tfoot>
+								</table>
+							</div>
+
+
 						</article>
 
 						<!-- About Me -->
