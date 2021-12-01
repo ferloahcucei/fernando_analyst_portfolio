@@ -188,8 +188,54 @@
 
 							<p> Web scrapping is a method to extract data from a page or website found on the internet, one of my tasks as a data analyst is to obtain data from various sources and then make a union, complement or simply compare with other data. In order to obtain reliable information, sometimes the process must be done by oneself, and in this project, we have a script that allows us to extract the data from a website.</p> <br>
 							<p>It is possible to apply this method to different scenarios, but in this case, I focus on obtaining the data from a database of soccer matches.</p>
-							
+						    <h4>Code in Python</h4>
+<pre><code>
 
+# -*- coding: utf-8 -*-
+from selenium import webdriver
+from selenium.webdriver.support.ui import Select
+from selenium.webdriver.common.by import By
+from selenium.webdriver.chrome.service import Service
+from time import sleep
+import pandas as pd
+
+s=Service('C://Users//benoj//Downloads//chromedriver_win32//chromedriver.exe')
+driver = webdriver.Chrome(service=s)
+url='https://www.adamchoi.co.uk/teamgoals/detailed'
+driver.get(url)
+
+
+all_matches_button = driver.find_element(By.XPATH, '//label[@analytics-event="All matches"]')
+all_matches_button.click()
+
+#Choosing a country value from a select field
+
+select_country = Select(driver.find_element(By.ID,'country'))
+select_country.select_by_visible_text('Mexico')
+
+# Select matches but first wait til the table is completely loaded with sleep
+sleep(5)
+
+matches = driver.find_elements(By.TAG_NAME, "tr")
+
+print(len(matches))
+
+matches_all = []
+
+for match in matches:
+	matches_all.append(match.text)
+	
+driver.quit()
+
+#Pandas library used to convert the list into a data frame
+
+df = pd.DataFrame({'Matches':matches_all})
+print(df)
+
+df.to_csv('matches.csv',index=False)
+</code></pre>
+							<p>As a result of the execution of the code above, we obtain the following 328 rows in a file called "matches.csv".</p>
+							<span class="image main"><img src="images/dataframe_matches.PNG" alt="" /></span>
 							<p>Here the link to the code in my Kaggle Profile <a href="https://www.kaggle.com/fernandoloah">awesome work</a>.</p>
 							<p>More Description.</p>
 						</article>
