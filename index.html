@@ -184,7 +184,7 @@
 							<h2 class="major">Data Extraction</h2>
 							<h3>Web Scrapping</h3>
 							<span class="image main"><img src="images/data_extraction.PNG" alt="" /></span>
-							<p>Expertise tools: Python, Selenium, CSV, HTML.</p>
+							<p>Expertise tools: Python, Selenium, Pandas, CSV, HTML.</p>
 
 							<p> Web scrapping is a method to extract data from a page or website found on the internet, one of my tasks as a data analyst is to obtain data from various sources and then make a union, complement or simply compare with other data. In order to obtain reliable information, sometimes the process must be done by oneself, and in this project, we have a script that allows us to extract the data from a website.</p> <br>
 							<p>It is possible to apply this method to different scenarios, but in this case, I focus on obtaining the data from a database of soccer matches.</p>
@@ -236,7 +236,18 @@ df.to_csv('matches.csv',index=False)
 </code></pre>
 							<p>As a result of the execution of the code above, we obtain the following 328 rows in a file called "matches.csv".</p>
 							<span class="image main"><img src="images/dataframe_matches.PNG" alt="" /></span>
-							<p>Here the link to the code in my Kaggle Profile <a href="https://www.kaggle.com/fernandoloah">awesome work</a>.</p>
+							<p>Doing in Google Spreadsheets a little bit of data cleaning, sorting and filtering we can obtain a more organized dataset to visualize in Tableau</p>
+							<h4>Applying some functions:</h4>
+							<ul>
+								<li>Importing CSV to GS</li>
+								<li>SPLIT(G2,RIGHT(G2,1)) #To separate values from numbers</li>
+								<li>Correcting names and accents</li>
+								<li>Organizing in columns</li>
+							</ul>	
+							<p>The next tool allows us to filter scores per date in a much more organized way</p>
+							<div class='tableauPlaceholder' id='viz1638332516422' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;ZG&#47;ZGRWQZ72P&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='path' value='shared&#47;ZGRWQZ72P' /> <param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;ZG&#47;ZGRWQZ72P&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1638332516422');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+ 							
+							<p>Here the link to the Spreadsheet <a href="https://docs.google.com/spreadsheets/d/1-cqPETdjMAFUiUhHHMlHtqbUv2l98lO6IO0poki8_W8/edit?usp=sharing">Matches</a>.</p>
 							<p>More Description.</p>
 						</article>
 
