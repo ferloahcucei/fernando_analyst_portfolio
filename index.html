@@ -272,11 +272,20 @@ df.to_csv('matches.csv',index=False)
 							<p>Expertise tools: C++, Visual Studio 2019, OpenCV, Intel Realsense 3D Camera.</p>
 							<p>
 								Currently we have different methods (mechanical counter, turnstiles, scales, bars with sensors, 2D cameras, among others) to count the people who enter an enclosure (schools, hospitals, theaters, etc.), however, the constant change and advances in technology force us to modify or change these methods to adapt them to the emerging needs. In addition, the change brings with it new requirements and new specifications, so this project consists of a system capable of count people by computer vision (using a 3D camera) who come in and leave, with the objective of determining the number of people who are within an enclosure.
-							</p>								
-							
+							</p>	
 							<p>3D Camera Intel RealSense Model D415</p>
 							<span class="image main"><img src="images/camera_realsense_d415.PNG" alt="" /></span>
-							<p>More Description (Still in progress).</p>
+							<p>The 3D images are data maps that contain the RGB color plane and also one that is a matrix of depth data. These data are essential to calculate the distance at which the objects are. Said matrix is obtained from an infrared ray that is emitted by one of the components of the camera. The time it takes for the beam from exiting to returning to the camera lens (a kind of bounce) is what a distance calculation provides.</p>
+							<span class="image main"><img src="images/image3d.PNG" alt="" /></span>	
+							<p>Figure shows a 3D Image viewer pointing to a desk and a computer.</p>
+
+							<p>The 3D image processing makes it possible to identify, in this case, the bodies that approach a coded threshold in order to delimit an access area and, in this case, the passage of people in a bidirectional way.</p>
+									
+							<p>The algorithm to carry out the counting of people is based on the delimitation of areas of interest (ROI), these are extracted from the acquired image after image processing. Said processing performs a series of actions to adapt the image, which are detailed in the following table.</p>
+						
+							
+
+
 							<h4>Image Processing</h4>
 							<div class="table-wrapper">
 								<table class="alt">
